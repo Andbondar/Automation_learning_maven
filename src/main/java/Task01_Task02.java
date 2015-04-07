@@ -7,18 +7,22 @@ import java.util.Arrays;
 /**
  * Created by bondar on 4/7/2015.
  */
-public class Task01 {
+public class Task01_Task02 {
     enum Tasks {Task1, Task2}
 
     public static void main(String[] args) throws IOException {
-        ArrayList<String> myArrayListString = new Task01().sampleArrayList();
-        System.out.println("Input Array: " + Arrays.toString(myArrayListString.toArray()));
+        ArrayList<String> myArrayListString = new Task01_Task02().sampleArrayList();
+        System.out.println("Input Array(Task1): " + Arrays.toString(myArrayListString.toArray()));
+        String inputStringForTask2 = new Task01_Task02().sampleString();
+        System.out.println("Input string(Task2): " + inputStringForTask2);
 
         System.out.println("Input task name (Task1 or Task2):");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String inputString = reader.readLine();
 
-        int taskSwitcher = 0;//select task using User Input
+
+        //select task using User Input
+        int taskSwitcher = 0;
         if (inputString.matches("[Tt]ask ?0?1")) taskSwitcher = 1;
         else if (inputString.matches("[Tt]ask ?0?2")) taskSwitcher = 2;
 
@@ -30,7 +34,10 @@ public class Task01 {
                 ArraySplitter.splitArrayListWithStringJoiner(myArrayListString);
                 break;
             case 2:
-                System.out.println("Task2 will be here");
+                StringSplitter.splitString(inputStringForTask2);
+                StringSplitter.splitStingWOEmptyStrings(inputStringForTask2);
+                StringSplitter.splitStringAndTrimSpaces(inputStringForTask2);
+                StringSplitter.splitStringAndTrimNumbers(inputStringForTask2);
                 break;
             default:
                 System.out.println("No such task");
@@ -49,5 +56,9 @@ public class Task01 {
         myArrayListString.add("catty43");
         myArrayListString.add("test14.22");
         return myArrayListString;
+    }
+
+    public String sampleString(){
+        return "   cat, dog, null  , cat18, abc, , 22, 58.74, , abomination   , 12rat34, 12abc12def34";
     }
 }
