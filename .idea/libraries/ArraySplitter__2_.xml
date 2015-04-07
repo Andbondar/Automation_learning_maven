@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ArraySplitter (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lib/ArraySplitter.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
