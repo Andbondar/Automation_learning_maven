@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="StringSplitter">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../StringSplitter/out/artifacts/StringSplitter_jar/StringSplitter.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/StringSplitter.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
