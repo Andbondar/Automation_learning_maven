@@ -24,10 +24,10 @@ public class Task01 {
 
         switch (taskSwitcher){
             case 1:
-                ArraySplitting.splitArrayList(myArrayListString);
-                ArraySplitting.splitArrayListWONulls(myArrayListString);
-                ArraySplitting.splitArrayListWithReplacing(myArrayListString);
-                ArraySplitting.splitArrayListWithStringJoiner(myArrayListString);
+                ArraySplitter.splitArrayList(myArrayListString);
+                ArraySplitter.splitArrayListWONulls(myArrayListString);
+                ArraySplitter.splitArrayListWithReplacing(myArrayListString);
+                ArraySplitter.splitArrayListWithStringJoiner(myArrayListString);
                 break;
             case 2:
                 System.out.println("Task2 will be here");

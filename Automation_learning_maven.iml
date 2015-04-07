@@ -12,5 +12,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="com.google.guava:guava:17.0-rc2" level="project" />
+    <orderEntry type="library" name="ArraySplitter" level="project" />
   </component>
 </module>
