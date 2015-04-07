@@ -11,8 +11,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="com.google.guava:guava:17.0-rc2" level="project" />
-    <orderEntry type="library" name="ArraySplitter" level="project" />
-    <orderEntry type="library" name="StringSplitter" level="project" />
+    <orderEntry type="library" exported="" name="com.google.guava:guava:17.0-rc2" level="project" />
+    <orderEntry type="library" exported="" name="ArraySplitter" level="project" />
+    <orderEntry type="library" exported="" name="StringSplitter" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:17.0-rc2" level="project" />
   </component>
 </module>
