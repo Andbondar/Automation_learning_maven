@@ -8,7 +8,8 @@ import java.util.Arrays;
  * Created by bondar on 4/7/2015.
  */
 public class Task01_Task02 {
-    enum Tasks {Task1, Task2}
+    enum Task1 {SPLIT, WONULLS, REPLACING, END}
+    enum Task2 {SPLIT, WOENPTY, TRIMSPACE, TRIMNUMBERS}
 
     public static void main(String[] args) throws IOException {
         ArrayList<String> myArrayListString = new Task01_Task02().sampleArrayList();
@@ -23,21 +24,21 @@ public class Task01_Task02 {
 
         //select task using User Input
         int taskSwitcher = 0;
-        if (inputString.matches("[Tt]ask ?0?1")) taskSwitcher = 1;
-        else if (inputString.matches("[Tt]ask ?0?2")) taskSwitcher = 2;
+        if (inputString.contains("1")) taskSwitcher = 1;
+        else if (inputString.contains("2")) taskSwitcher = 2;
 
         switch (taskSwitcher){
             case 1:
-                ArraySplitter.splitArrayList(myArrayListString);
-                ArraySplitter.splitArrayListWONulls(myArrayListString);
-                ArraySplitter.splitArrayListWithReplacing(myArrayListString);
-                ArraySplitter.splitArrayListWithStringJoiner(myArrayListString);
+                doTask1(Task1.SPLIT, myArrayListString);
+                doTask1(Task1.WONULLS, myArrayListString);
+                doTask1(Task1.REPLACING, myArrayListString);
+                doTask1(Task1.END, myArrayListString);
                 break;
             case 2:
-                StringSplitter.splitString(inputStringForTask2);
-                StringSplitter.splitStingWOEmptyStrings(inputStringForTask2);
-                StringSplitter.splitStringAndTrimSpaces(inputStringForTask2);
-                StringSplitter.splitStringAndTrimNumbers(inputStringForTask2);
+                doTask2(Task2.SPLIT, inputStringForTask2);
+                doTask2(Task2.WOENPTY, inputStringForTask2);
+                doTask2(Task2.TRIMSPACE, inputStringForTask2);
+                doTask2(Task2.TRIMNUMBERS, inputStringForTask2);
                 break;
             default:
                 System.out.println("No such task");
@@ -60,5 +61,39 @@ public class Task01_Task02 {
 
     public String sampleString(){
         return "   cat, dog, null  , cat18, abc, , 22, 58.74, , abomination   , 12rat34, 12abc12def34";
+    }
+
+    public static void doTask1(Task1 inputTask1, ArrayList<String> inputArrayListString){
+        switch (inputTask1){
+            case SPLIT:
+                ArraySplitter.splitArrayList(inputArrayListString);
+                break;
+            case WONULLS:
+                ArraySplitter.splitArrayListWONulls(inputArrayListString);
+                break;
+            case REPLACING:
+                ArraySplitter.splitArrayListWithReplacing(inputArrayListString);
+                break;
+            case END:
+                ArraySplitter.splitArrayListWithStringJoiner(inputArrayListString);
+                break;
+        }
+    }
+
+    public static void doTask2(Task2 inputTask, String inputString){
+        switch (inputTask){
+            case SPLIT:
+                StringSplitter.splitString(inputString);
+                break;
+            case WOENPTY:
+                StringSplitter.splitStingWOEmptyStrings(inputString);
+                break;
+            case TRIMSPACE:
+                StringSplitter.splitStringAndTrimSpaces(inputString);
+                break;
+            case TRIMNUMBERS:
+                StringSplitter.splitStringAndTrimNumbers(inputString);
+                break;
+        }
     }
 }

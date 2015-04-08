@@ -13,8 +13,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="ArraySplitter" level="project" />
     <orderEntry type="library" exported="" name="StringSplitter" level="project" />
-    <orderEntry type="library" name="Maven: com.google.guava:guava:17.0-rc2" level="project" />
     <orderEntry type="library" name="ArraySplitter (2)" level="project" />
     <orderEntry type="library" name="StringSplitter (2)" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:17.0-rc2" level="project" />
   </component>
 </module>
