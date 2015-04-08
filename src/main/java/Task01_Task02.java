@@ -11,7 +11,7 @@ public class Task01_Task02 {
     enum Task1 {SPLIT, WONULLS, REPLACING, END}
     enum Task2 {SPLIT, WOENPTY, TRIMSPACE, TRIMNUMBERS}
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
         ArrayList<String> myArrayListString = new Task01_Task02().sampleArrayList();
         System.out.println("Input Array(Task1): " + Arrays.toString(myArrayListString.toArray()));
         String inputStringForTask2 = new Task01_Task02().sampleString();
@@ -19,8 +19,15 @@ public class Task01_Task02 {
 
         System.out.println("Input task name (Task1 or Task2):");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String inputString = reader.readLine();
 
+        String inputString = "";
+        try{
+            inputString = reader.readLine();
+        }
+        catch (IOException e){
+            System.out.println("Got an exception while reading input string");
+            e.printStackTrace();
+        }
 
         //select task using User Input
         int taskSwitcher = 0;
@@ -43,6 +50,8 @@ public class Task01_Task02 {
             default:
                 System.out.println("No such task");
         }
+
+
     }
 
 
